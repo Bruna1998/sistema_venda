@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link  rel="stylesheet" href='style_cadastro_produto.css'>
+        <title>Cadastrar Produto</title>
+    </head>
+    <body>
+        <h1>Cadastro de Produto</h1>
+        <form method="post" action="class_controller_produto.php">
+            <input type="hidden" name="acao" value="1">
+            <div>
+                <label for="descricao">Descrição</label>
+                <input type="text" id="descricao" name="descricao" required>
+            </div>
+            <div>
+                <label for="preco">Preço</label>
+                <input type="number" name="preco" id="preco" step="0.01" min="0" required>
+            </div>
+            <div>
+                <label for="quantidade">Quantidade</label>
+                <input type="number" name="quantidade" id="quantidade" min="0" required>
+            </div>
+            <div>
+                <button type="submit">Cadastrar</button>
+            </div>
+            
+        </form>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Carrinho de Compra</title>
+    </head>
+    <body>
+        <form method="post" action="">
+            <div>
+                <label for="codigo">Código</label>
+                <input type="number" id="codigo" name="codigo" readonly>
+                <button type="button" onclick="consultarProduto()">🔍</button>
+            </div>
+            <div>
+                <label for="descricaoProduto">Descrição</label>
+                <input type="text" id="descricaoProduto" name="descricaoProduto" readonly>
+            </div>
+            <div>
+                <label for="quantidade">Quantidade</label>
+                <input type="number" id="quantidade" min="0">
+            </div>
+            <div>
+                Total Compra:
+                <input type="number" id="total" name="total" step="0.01" readonly>
+            </div>
+            <div>
+                <button type="submit">Finalizar</button>
+            </div>
+        </form>
+
+
+          <!-- Modal -->
+        <div id="modalProdutos"  style="
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border: 1px solid black;
+            padding: 10px ";>
+            <iframe
+                id="iframeProdutos"
+                src=""
+                width="800"
+                height="500">
+            </iframe>
+
+            <button type="button" onclick="fecharModal()">
+                Fechar
+            </button>
+        </div>
+
+
+        <script>
+
+            function consultarProduto() {
+
+                document.getElementById('iframeProdutos').src =
+                    'class_view_consultar_produtos.php';
+
+                document.getElementById('modalProdutos').style.display =
+                    'block';
+            }
+
+
+            function fecharModal() {
+
+                document.getElementById('modalProdutos').style.display =
+                    'none';
+
+            }
+
+        </script>
+    </body>
+</html>

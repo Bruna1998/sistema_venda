@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style_menu_principal.css">
+        <title>Sistema de Vendas</title>
+    </head>
+
+    <body>
+        <h1>Sistema de Vendas</h1>
+        <div>
+            <ul>
+                <li>
+                    Produto
+
+                    <ul>
+                        <li>
+                            <a href="class_view_cadastro_produto.html">
+                                Cadastrar Produto
+                            </a>
+                        </li>
+
+                        <li>
+                            <form method="post" action="class_controller_produto.php">
+                                <input type="hidden" name="acao" value="4">
+
+                                <button type="submit">
+                                    Consultar Produto
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    Carrinho
+
+                    <ul>
+                        <li>
+                            <a href="class_view_venda.html">
+                                Comprar
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+
+    </body>
+</html>
